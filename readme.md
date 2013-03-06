@@ -1,4 +1,4 @@
-# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular.png?branch=master)](http://travis-ci.org/yeoman/generator-angular)
+# AngularJS generator [![Build Status](https://secure.travis-ci.org/JakubMrozek/generator-angular.png?branch=master)](http://travis-ci.org/JakubMrozek/generator-angular)
 
 Maintainer: [Brian Ford](https://github.com/btford)
 
@@ -167,11 +167,11 @@ A project can mix CoffeScript and JavaScript files.
 
 
 ### TypeScript
-For generators that output scripts, the `--ts` option will output TypeScript instead of JavaScript.
+For generators that output scripts, the `--typescript` option will output TypeScript instead of JavaScript.
 
 For example:
 ```bash
-yo angular:controller user --ts
+yo angular:controller user --typescript
 ```
 
 Produces `app/scripts/controller/user.ts`:

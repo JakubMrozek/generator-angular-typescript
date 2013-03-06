@@ -90,6 +90,32 @@ describe('Angular generator', function () {
     });
   });
 
+  it('creates typescript files', function (done) {
+    var expected = ['app/.htaccess',
+      'app/404.html',
+      'app/favicon.ico',
+      'app/robots.txt',
+      'app/styles/main.css',
+      'app/views/main.html',
+      ['.bowerrc', /"directory": "app\/components"/],
+      'Gruntfile.js',
+      'package.json',
+      ['component.json', /"name":\s+"temp"/],
+      'app/scripts/app.ts',
+      'app/index.html',
+      'app/scripts/controllers/main.ts',
+      'test/spec/controllers/main.ts',
+      // 'testacular.conf.js'
+    ];
+    helpers.mockPrompt(angular, {'bootstrap': 'Y', 'compassBoostrap': 'Y'});
+
+    angular.env.options.typescript = true;
+    angular.run([], function() {
+      helpers.assertFiles(expected);
+      done();
+    });
+  });
+
   describe('Controller', function() {
     it('should generate a new controller', function(done) {
       var angularCtrl;

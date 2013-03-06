@@ -42,6 +42,19 @@ function Generator() {
     this.env.options.coffee = this.options.coffee;
   }
 
+  if (typeof this.env.options.typescript === 'undefined') {
+    this.option('typescript');
+
+    // attempt to detect if user is using typescript or not
+    // if cml arg provided, use that; else look for the existence of ts
+    if (!this.options.typescript &&
+      this.expandFiles('/' + this.appPath + '/scripts/**/*.ts', {}).length > 0) {
+      this.options.typescript = true;
+    }
+
+    this.env.options.typescript = this.options.typescript;
+  }
+
   if (typeof this.env.options.minsafe === 'undefined') {
     this.option('minsafe');
     this.env.options.minsafe = this.options.minsafe;
@@ -53,6 +66,11 @@ function Generator() {
   if (this.env.options.coffee) {
     sourceRoot = '/templates/coffeescript';
     this.scriptSuffix = '.coffee';
+  }
+
+  if (this.env.options.typescript) {
+    sourceRoot = '/templates/typescript';
+    this.scriptSuffix = '.ts';
   }
 
   if (this.env.options.minsafe) {
