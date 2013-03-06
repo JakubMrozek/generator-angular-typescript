@@ -1,3 +1,5 @@
+/// <reference path="../../app/types/angular/angular.d.ts" />
+
 'use strict';
 
 describe('Service: <%= _.camelize(name) %>', function () {
