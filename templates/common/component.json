@@ -4,6 +4,7 @@
   "dependencies": {
     "angular": "~1.0.5",
     "json3": "~3.2.4",
+    "bootstrap": "*",
     "es5-shim": "2.0.2"<% if (resourceModule) { %>,
     "angular-resource": "~1.0.5"<% } %><% if (cookiesModule) { %>,
     "angular-cookies": "~1.0.5"<% } %><% if (sanitizeModule) { %>,
