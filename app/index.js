@@ -70,6 +70,12 @@ var Generator = module.exports = function Generator() {
   this.on('end', function () {
     console.log('\nI\'m all done. Just run ' + 'npm install && bower install --dev'.bold.yellow + ' to install the required dependencies.');
   });
+
+  this.resourceModule = true;
+  this.cookiesModule = false;
+  this.sanitizeModule = false;
+  this.bootstrap = false;
+  this.compassBootstrap = false;
 };
 
 util.inherits(Generator, yeoman.generators.NamedBase);
