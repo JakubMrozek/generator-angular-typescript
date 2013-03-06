@@ -177,7 +177,7 @@ yo angular:controller user --typescript
 Produces `app/scripts/controller/user.ts`:
 ```typescript
 angular.module('myMod')
-  .controller('UserCtrl', function (ng.IScope $scope) {
+  .controller('UserCtrl', function ($scope: ng.IScope) {
   // ...
 });
 ```
