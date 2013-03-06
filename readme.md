@@ -165,6 +165,26 @@ angular.module('myMod')
 
 A project can mix CoffeScript and JavaScript files.
 
+
+### TypeScript
+For generators that output scripts, the `--ts` option will output TypeScript instead of JavaScript.
+
+For example:
+```bash
+yo angular:controller user --ts
+```
+
+Produces `app/scripts/controller/user.ts`:
+```typescript
+angular.module('myMod')
+  .controller('UserCtrl', function (ng.IScope $scope) {
+  // ...
+});
+```
+
+A project can mix TypeScript and JavaScript files.
+
+
 ### Minification Safe
 By default, generators produce unannotated code. Without annotations, AngularJS's DI system will break when minified. Typically, these annotations the make minification safe are added automatically at build-time, after application files are concatenated, but before they are minified. By providing the `--minsafe` option, the code generated will out-of-the-box be ready for minification. The trade-off is between amount of boilerplate, and build process complexity.
 
@@ -173,7 +193,7 @@ By default, generators produce unannotated code. Without annotations, AngularJS'
 yo angular:controller user --minsafe
 ```
 
-Produces `app/controller/user.coffee`:
+Produces `app/controller/user.js`:
 ```javascript
 angular.module('myMod').controller('UserCtrl', ['$scope', function ($scope) {
   // ...
