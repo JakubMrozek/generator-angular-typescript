@@ -29,6 +29,10 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.coffee'],
         tasks: ['coffee:test']
       },
+      typescript: {
+        files: ['<%%= yeoman.app %>/scripts/{,*/}*.ts'],
+        tasks: ['typescript:base']
+      },
       less: {
         files: ['<%%= yeoman.app %>/less/{,*/}*.less'],
         tasks: ['less']
@@ -92,6 +96,19 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'testacular.conf.js',
         singleRun: true
+      }
+    },
+    typescript: {
+      base: {
+        src: ['<%%= yeoman.app %>/scripts/{,*/}*.ts'],
+        //dest: 'where/you/want/your/js/files',
+        options: {
+          module: 'amd', //or commonjs
+          target: 'es5', //or es3
+          //base_path: 'path/to/typescript/files',
+          sourcemap: true,
+          declaration: true
+        }
       }
     },
     coffee: {
@@ -232,8 +249,8 @@ module.exports = function (grunt) {
   grunt.registerTask('server', [
     'clean:server',
     'coffee:dist',
-    //'compass:server',
     'less',
+    'typescript',
     'livereload-start',
     'connect:livereload',
     'open',
@@ -243,7 +260,8 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'coffee',
-    'compass',
+    'less',
+    'typescript',
     'connect:test',
     'testacular'
   ]);
@@ -253,7 +271,8 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'coffee',
-    'compass:dist',
+    'less',
+    'typescript',
     'useminPrepare',
     'imagemin',
     'cssmin',
