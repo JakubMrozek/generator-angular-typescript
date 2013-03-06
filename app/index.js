@@ -74,6 +74,7 @@ var Generator = module.exports = function Generator() {
 
 util.inherits(Generator, yeoman.generators.NamedBase);
 
+/*
 Generator.prototype.askFor = function askFor() {
   var cb = this.async();
 
@@ -99,7 +100,9 @@ Generator.prototype.askFor = function askFor() {
     cb();
   }.bind(this));
 };
+*/
 
+/*
 Generator.prototype.askForModules = function askForModules () {
   var cb = this.async();
 
@@ -132,7 +135,9 @@ Generator.prototype.askForModules = function askForModules () {
     cb();
   }.bind(this));
 };
+*/
 
+/*
 // Duplicated from the SASS generator, waiting a solution for #138
 Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   var appPath = this.appPath;
@@ -156,6 +161,7 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
     //this.directory( 'images', 'app/images' );
   }
 };
+*/
 
 Generator.prototype.createIndexHtml = function createIndexHtml() {
   this.template('../../templates/common/index.html', path.join(this.appPath, 'index.html') );
