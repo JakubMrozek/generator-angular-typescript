@@ -1,5 +1,5 @@
 {
-  "name": "imatic-stack",
+  "name": "generator-angular",
   "version": "0.0.1",
   "description": "Imatic devel stack for single-page applications",
   "keywords": [
@@ -25,7 +25,8 @@
     "test": "mocha test"
   },
   "dependencies": {
-    "yeoman-generator": "~0.10.2"
+    "yeoman-generator": "~0.10.2",
+    "generator-angular-typescript": "git://github.com/JakubMrozek/generator-angular-typescript"
   },
   "devDependencies": {
     "mocha": "~1.8.1"
