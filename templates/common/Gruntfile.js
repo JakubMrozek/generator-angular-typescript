@@ -286,9 +286,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'jshint',
+    //'jshint',
     'test',
-    'coffee',
+    //'coffee',
     'less',
     'typescript',
     'useminPrepare',
@@ -303,5 +303,5 @@ module.exports = function (grunt) {
     'uglify'
   ]);
 
-  grunt.registerTask('default', ['build']);
+  //grunt.registerTask('default', ['build']);
 };
