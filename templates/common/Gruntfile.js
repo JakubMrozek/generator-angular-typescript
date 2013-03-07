@@ -33,6 +33,10 @@ module.exports = function (grunt) {
         files: ['<%%= yeoman.app %>/scripts/{,*/}*.ts'],
         tasks: ['typescript:base']
       },
+      typescriptTest: {
+        files: ['test/spec/{,*/}*.ts'],
+        tasks: ['typescript:test']
+      },
       less: {
         files: ['<%%= yeoman.app %>/less/{,*/}*.less'],
         tasks: ['less']
@@ -93,14 +97,30 @@ module.exports = function (grunt) {
       ]
     },
     testacular: {
-      unit: {
+      all: {
         configFile: 'testacular.conf.js',
         singleRun: true
+      },
+      unit: {
+        configFile: 'testacular.unit.conf.js',
+        singleRun: false,
+        autoWatch: true
       }
     },
     typescript: {
       base: {
         src: ['<%%= yeoman.app %>/scripts/{,*/}*.ts'],
+        //dest: 'where/you/want/your/js/files',
+        options: {
+          module: 'amd', //or commonjs
+          target: 'es5', //or es3
+          //base_path: 'path/to/typescript/files',
+          sourcemap: true,
+          declaration: true
+        }
+      },
+      test: {
+        src: ['test/spec/{,*/}*.ts', 'test/e2e/{,*/}*.ts'],
         //dest: 'where/you/want/your/js/files',
         options: {
           module: 'amd', //or commonjs
@@ -132,7 +152,7 @@ module.exports = function (grunt) {
           paths: ["<%%= yeoman.app %>/components/bootstrap/less"]
         },
         files: {
-          "app/css/style.css": "<%%= yeoman.app %>/less/style.less"
+          "<%%= yeoman.app %>/css/style.css": "<%%= yeoman.app %>/less/style.less"
         }
       }
     },
@@ -248,7 +268,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', [
     'clean:server',
-    'coffee:dist',
     'less',
     'typescript',
     'livereload-start',
@@ -259,11 +278,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
-    'coffee',
     'less',
     'typescript',
     'connect:test',
-    'testacular'
+    'testacular:all'
   ]);
 
   grunt.registerTask('build', [

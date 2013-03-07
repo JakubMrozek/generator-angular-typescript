@@ -1,4 +1,4 @@
-/// <reference path="../../app/types/angular/angular.d.ts" />
+/// <reference path="../../../app/types/angular/angular.d.ts" />
 
 'use strict';
 
