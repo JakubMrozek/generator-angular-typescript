@@ -5,7 +5,7 @@
 'use strict';
 
 describe('Directive: <%= _.camelize(name) %>', function () {
-  beforeEach(angular.mock.module('<%= _.camelize(appname) %>App'));
+  beforeEach(angular.mock.module('app'));
 
   var element;
 

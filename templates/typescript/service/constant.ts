@@ -2,5 +2,5 @@
 
 'use strict';
 
-angular.module('<%= _.camelize(appname) %>App')
+angular.module('app.service')
   .constant('<%= _.camelize(name) %>', 42);

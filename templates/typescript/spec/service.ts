@@ -7,7 +7,7 @@
 describe('Service: <%= _.camelize(name) %>', function () {
 
   // load the service's module
-  beforeEach(angular.mock.module('<%= _.camelize(appname) %>App'));
+  beforeEach(angular.mock.module('app.service'));
 
   // instantiate service
   var <%= _.camelize(name) %>;

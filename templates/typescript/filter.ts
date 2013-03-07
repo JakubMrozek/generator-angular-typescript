@@ -2,7 +2,7 @@
 
 'use strict';
 
-angular.module('<%= _.camelize(appname) %>App')
+angular.module('app.filter')
   .filter('<%= _.camelize(name) %>', [function () {
     return function (input: string) {
       return '<%= _.camelize(name) %> filter: ' + input;

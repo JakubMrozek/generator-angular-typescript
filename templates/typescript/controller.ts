@@ -2,13 +2,7 @@
 
 'use strict';
 
-module app.<%= name.toLowerCase() %> {
+angular.module('app.controller')
+  .controller('<%= _.classify(name) %>Ctrl', ['$scope', function ($scope) {
 
-  export class Ctrl {
-
-  constructor (private $scope) {
-
-  }
-}
-
-}
+  }]);

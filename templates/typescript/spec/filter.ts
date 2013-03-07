@@ -6,7 +6,7 @@
 describe('Filter: <%= _.camelize(name) %>', function () {
 
   // load the filter's module
-  beforeEach(angular.mock.module('<%= _.camelize(appname) %>App'));
+  beforeEach(angular.mock.module('app.filter'));
 
   // initialize a new instance of the filter before each test
   var <%= _.camelize(name) %>;
