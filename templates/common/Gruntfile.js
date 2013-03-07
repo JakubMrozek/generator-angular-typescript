@@ -289,8 +289,6 @@ module.exports = function (grunt) {
     //'jshint',
     'test',
     //'coffee',
-    'less',
-    'typescript',
     'useminPrepare',
     'imagemin',
     'cssmin',

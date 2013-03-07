@@ -1,23 +1,25 @@
 {
-  "name": "generator-angular",
-  "version": "0.1.5",
-  "description": "Yeoman generator for AngularJS",
+  "name": "imatic-stack",
+  "version": "0.0.1",
+  "description": "Imatic devel stack for single-page applications",
   "keywords": [
     "yeoman-generator",
+    "generator-angular",
     "yeoman",
+    "typescript",
     "generator",
     "framework",
     "component",
     "front-end",
     "app"
   ],
-  "homepage": "https://github.com/yeoman/generator-angular",
-  "bugs": "https://github.com/yeoman/generator-angular/issues",
-  "author": "Chrome Developer Relations",
+  "homepage": "https://github.com/JakubMrozek/generator-angular-typescript",
+  "bugs": "https://github.com/JakubMrozek/generator-angular-typescript/issues",
+  "author": "Jakub Mrozek",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yeoman/generator-angular.git"
+    "url": "git://github.com/yeoman/JakubMrozek/generator-angular-typescript.git"
   },
   "scripts": {
     "test": "mocha test"
