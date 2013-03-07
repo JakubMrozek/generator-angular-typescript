@@ -25,8 +25,7 @@
     "test": "mocha test"
   },
   "dependencies": {
-    "yeoman-generator": "~0.10.2",
-    "generator-angular-typescript": "git://github.com/JakubMrozek/generator-angular-typescript"
+    "yeoman-generator": "~0.10.2"
   },
   "devDependencies": {
     "mocha": "~1.8.1"

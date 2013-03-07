@@ -286,9 +286,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    //'jshint',
     'test',
-    //'coffee',
     'useminPrepare',
     'imagemin',
     'cssmin',
