@@ -2,12 +2,12 @@
 
 'use strict';
 
-angular.module('<%= _.camelize(appname) %>App', [])
+angular.module('app', [])
   .config(['$routeProvider', function ($routeProvider: ng.IRouteProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: app.main.Ctrl
       })
       .otherwise({
         redirectTo: '/'

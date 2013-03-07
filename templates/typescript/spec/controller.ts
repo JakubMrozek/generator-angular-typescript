@@ -2,24 +2,21 @@
 /// <reference path="../../../app/types/angular/angular-mocks.d.ts" />
 /// <reference path="../../../app/types/jasmine/jasmine.d.ts" />
 
+/// <reference path="../../../app/scripts/controllers/<%= name.toLowerCase() %>.d.ts" />
+
 'use strict';
 
-describe('Controller: <%= _.classify(name) %>Ctrl', function () {
+describe('Controller: app.<%= name.toLowerCase() %>.Ctrl', function () {
 
-  // load the controller's module
-  beforeEach(angular.mock.module('<%= _.camelize(appname) %>App'));
+  var ctrl: app.<%= name.toLowerCase() %>.Ctrl;
 
-  var <%= _.classify(name) %>Ctrl, scope;
-
-  // Initialize the controller and a mock scope
-  beforeEach(function() {
-    inject(function ($controller) {
-      scope = {};
-      <%= _.classify(name) %>Ctrl = $controller('<%= _.classify(name) %>Ctrl', {
-        $scope: scope
-      });
+  beforeEach(function(){
+    angular.mock.module('app');
+    ctrl = new app.<%= name.toLowerCase() %>.Ctrl({
+      $scope: {}
     });
   });
+
 
   it('...', function () {
 
