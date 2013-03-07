@@ -1,15 +1,17 @@
 /// <reference path="../../../app/types/angular/angular.d.ts" />
+/// <reference path="../../../app/types/angular/angular-mocks.d.ts" />
+/// <reference path="../../../app/types/jasmine/jasmine.d.ts" />
 
 'use strict';
 
 describe('Service: <%= _.camelize(name) %>', function () {
 
   // load the service's module
-  beforeEach(module('<%= _.camelize(appname) %>App'));
+  beforeEach(angular.mock.module('<%= _.camelize(appname) %>App'));
 
   // instantiate service
   var <%= _.camelize(name) %>;
-  beforeEach(inject(function (_<%= _.camelize(name) %>_) {
+  beforeEach(angular.mock.inject(function(_<%= _.camelize(name) %>_) {
     <%= _.camelize(name) %> = _<%= _.camelize(name) %>_;
   }));
 

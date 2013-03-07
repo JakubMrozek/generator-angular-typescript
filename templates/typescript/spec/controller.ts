@@ -1,24 +1,27 @@
 /// <reference path="../../../app/types/angular/angular.d.ts" />
+/// <reference path="../../../app/types/angular/angular-mocks.d.ts" />
+/// <reference path="../../../app/types/jasmine/jasmine.d.ts" />
 
 'use strict';
 
 describe('Controller: <%= _.classify(name) %>Ctrl', function () {
 
   // load the controller's module
-  beforeEach(module('<%= _.camelize(appname) %>App'));
+  beforeEach(angular.mock.module('<%= _.camelize(appname) %>App'));
 
-  var <%= _.classify(name) %>Ctrl,
-    scope;
+  var <%= _.classify(name) %>Ctrl, scope;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller) {
-    scope = {};
-    <%= _.classify(name) %>Ctrl = $controller('<%= _.classify(name) %>Ctrl', {
-      $scope: scope
+  beforeEach(function() {
+    inject(function ($controller) {
+      scope = {};
+      <%= _.classify(name) %>Ctrl = $controller('<%= _.classify(name) %>Ctrl', {
+        $scope: scope
+      });
     });
-  }));
+  });
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('...', function () {
+
   });
 });

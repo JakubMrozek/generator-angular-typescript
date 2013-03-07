@@ -1,15 +1,16 @@
 /// <reference path="../../../app/types/angular/angular.d.ts" />
-
+/// <reference path="../../../app/types/angular/angular-mocks.d.ts" />
+/// <reference path="../../../app/types/jasmine/jasmine.d.ts" />
 'use strict';
 
 describe('Filter: <%= _.camelize(name) %>', function () {
 
   // load the filter's module
-  beforeEach(module('<%= _.camelize(appname) %>App'));
+  beforeEach(angular.mock.module('<%= _.camelize(appname) %>App'));
 
   // initialize a new instance of the filter before each test
   var <%= _.camelize(name) %>;
-  beforeEach(inject(function ($filter) {
+  beforeEach(angular.mock.inject(function($filter) {
     <%= _.camelize(name) %> = $filter('<%= _.camelize(name) %>');
   }));
 
