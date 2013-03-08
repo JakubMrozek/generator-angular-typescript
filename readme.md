@@ -8,7 +8,7 @@
 ```bash
 npm install yo grunt-cli bower testacular -g
 npm install git://github.com/JakubMrozek/generator-angular-typescript.git
-yo angular --typescript
+yo angular
 npm install && bower install
 ```
 
@@ -29,7 +29,7 @@ Kromě samotných controllerů, direktiv, filtrů a servisů vygenerují i pří
 Příkaz:
 
 ```bash
-yo angular:controller Ctrl --typescript
+yo angular:controller Ctrl
 ```
 
 Vygeneruje soubor app/scripts/controllers/ctrl.ts:
@@ -44,7 +44,7 @@ module app.controller {
 
   export class Ctrl implements IController {
 
-    constructor(private $scope) {
+    constructor (private $scope) {
 
     }
 
@@ -63,7 +63,7 @@ angular.module('app.controller').controller('app.controller.Ctrl', [
 Příkaz:
 
 ```bash
-yo angular:directive dir --typescript
+yo angular:directive dir
 ```
 
 Vygeneruje soubor app/scripts/directives/dir.ts:
@@ -82,7 +82,7 @@ module app.directive {
 
     restrict = 'E';
 
-    link(scope, element: JQuery, attrs: ng.IAttributes) {
+    link (scope, element: JQuery, attrs: ng.IAttributes) {
       element.text('this is the dir directive');
     }
 
@@ -101,7 +101,7 @@ angular.module('app.directive').directive('dir', [function(){
 Příkaz:
 
 ```bash
-yo angular:filter fil --typescript
+yo angular:filter fil
 ```
 
 Vygeneruje soubor app/scripts/filters/fil.ts:
@@ -136,7 +136,7 @@ angular.module('app.filter').filter('fil', [function(){
 Příkaz:
 
 ```bash
-yo angular:service serv --typescript
+yo angular:service serv
 ```
 
 Vygeneruje soubor app/scripts/services/serv.ts:
@@ -157,7 +157,7 @@ module app.service {
 
     }
 
-    someMethod() {
+    someMethod () {
       return this.meaningOfLife;
     }
 
