@@ -2,6 +2,8 @@
 /// <reference path="../../../app/types/angular/angular-mocks.d.ts" />
 /// <reference path="../../../app/types/jasmine/jasmine.d.ts" />
 
+/// <reference path="../../../app/scripts/directives/<%= name.toLowerCase() %>.ts" />
+
 'use strict';
 
 describe('Directive: <%= _.camelize(name) %>', function () {

@@ -4,8 +4,15 @@
 
 module app.controller {
 
+  /**
+   *
+   */
   export class <%= _.classify(name) %> {
 
+   /**
+    *
+    * @param $scope
+    */
     constructor(private $scope) {
 
     }

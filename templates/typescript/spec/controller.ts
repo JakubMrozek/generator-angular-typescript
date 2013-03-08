@@ -2,7 +2,7 @@
 /// <reference path="../../../app/types/angular/angular-mocks.d.ts" />
 /// <reference path="../../../app/types/jasmine/jasmine.d.ts" />
 
-/// <reference path="../../../app/scripts/controller/<%= name.toLowerCase() %>.d.ts" />
+/// <reference path="../../../app/scripts/controllers/<%= name.toLowerCase() %>.ts" />
 
 'use strict';
 
