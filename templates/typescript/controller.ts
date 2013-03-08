@@ -1,4 +1,5 @@
 /// <reference path="../../types/angular/angular.d.ts" />
+/// <reference path="../../types/app.d.ts" />
 
 'use strict';
 
@@ -7,7 +8,7 @@ module app.controller {
   /**
    *
    */
-  export class <%= _.classify(name) %> {
+  export class <%= _.classify(name) %> implements IController {
 
    /**
     *

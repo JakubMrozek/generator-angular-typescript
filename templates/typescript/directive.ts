@@ -1,4 +1,5 @@
 /// <reference path="../../types/angular/angular.d.ts" />
+/// <reference path="../../types/app.d.ts" />
 
 'use strict';
 
@@ -7,7 +8,7 @@ module app.directive {
   /**
    *
    */
-  export class <%= _.classify(name) %> {
+  export class <%= _.classify(name) %> implements IDirective {
 
     /**
      *
@@ -45,6 +46,6 @@ module app.directive {
 }
 
 
-angular
-  .module('app.directive')
-  .directive('<%= _.camelize(name) %>', [app.directive.<%= _.classify(name) %>.factory]);
+angular.module('app.directive').directive('<%= _.camelize(name) %>', [function(){
+  return new app.directive.<%= _.classify(name) %>();
+}]);

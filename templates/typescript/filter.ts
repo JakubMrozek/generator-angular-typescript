@@ -1,15 +1,7 @@
 /// <reference path="../../types/angular/angular.d.ts" />
+/// <reference path="../../types/app.d.ts" />
 
 'use strict';
-
-module app {
-
-  export interface IFilter {
-    filter (input: string): string;
-  }
-
-}
-
 
 module app.filter {
 
