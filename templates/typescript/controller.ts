@@ -2,7 +2,19 @@
 
 'use strict';
 
-angular.module('app.controller')
-  .controller('<%= _.classify(name) %>Ctrl', ['$scope', function ($scope) {
+module app.controller {
 
-  }]);
+  export class <%= _.classify(name) %> {
+
+    constructor(private $scope) {
+
+    }
+
+  }
+
+}
+
+
+angular.module('app.controller').controller('app.controller.<%= _.classify(name) %>', [
+  '$scope', app.controller.<%= _.classify(name) %>
+]);
