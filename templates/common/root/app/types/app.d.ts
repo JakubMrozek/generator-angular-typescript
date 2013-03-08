@@ -8,4 +8,6 @@ module app {
     filter (input: string): string;
   }
 
+  export interface IService {}
+
 }

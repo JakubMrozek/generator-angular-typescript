@@ -1,18 +1,36 @@
 /// <reference path="../../types/angular/angular.d.ts" />
+/// <reference path="../../types/app.d.ts" />
 
 'use strict';
 
-angular.module('app.service')
-  .factory('<%= _.camelize(name) %>', [function() {
-    // Service logic
-    // ...
+module app.service {
 
-    var meaningOfLife = 42;
+  /**
+   *
+   */
+  export class <%= _.classify(name) %> implements IService {
 
-    // Public API here
-    return {
-      someMethod: function() {
-        return meaningOfLife;
-      }
-    };
-  }]);
+    private meaningOfLife = 42;
+
+    /**
+     *
+     */
+    constructor () {
+
+    }
+
+    /**
+     *
+     */
+    someMethod() {
+      return this.meaningOfLife;
+    }
+
+  }
+
+}
+
+
+angular.module('app.service').factory('<%= _.camelize(name) %>', [function(){
+  return new app.service.<%= _.classify(name) %>();
+}]);

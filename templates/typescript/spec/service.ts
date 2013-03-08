@@ -2,21 +2,23 @@
 /// <reference path="../../../app/types/angular/angular-mocks.d.ts" />
 /// <reference path="../../../app/types/jasmine/jasmine.d.ts" />
 
+/// <reference path="../../../app/scripts/services/<%= name.toLowerCase() %>.ts" />
+
 'use strict';
 
-describe('Service: <%= _.camelize(name) %>', function () {
+describe('Service: app.service.<%= _.classify(name) %>', function () {
 
-  // load the service's module
-  beforeEach(angular.mock.module('app.service'));
+  var service: app.service.<%= _.classify(name) %>;
 
-  // instantiate service
-  var <%= _.camelize(name) %>;
-  beforeEach(angular.mock.inject(function(_<%= _.camelize(name) %>_) {
-    <%= _.camelize(name) %> = _<%= _.camelize(name) %>_;
-  }));
+  beforeEach(function(){
+    angular.mock.module('app');
+    angular.mock.inject(function(_<%= _.camelize(name) %>_) {
+      service = _<%= _.camelize(name) %>_;
+    })
+  });
 
-  it('should do something', function () {
-    expect(!!<%= _.camelize(name) %>).toBe(true);
+  it('...', function () {
+    expect(!!service).toBe(true);
   });
 
 });

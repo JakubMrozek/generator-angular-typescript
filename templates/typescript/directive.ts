@@ -24,15 +24,6 @@ module app.directive {
 
     /**
      *
-     * @returns {app.directives.<%= _.classify(name) %>}
-     */
-    static factory(): <%= _.classify(name) %> {
-      var directive = new <%= _.classify(name) %>();
-      return directive;
-    }
-
-    /**
-     *
      * @param scope
      * @param element
      * @param attrs
