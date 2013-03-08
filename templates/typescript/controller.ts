@@ -5,16 +5,9 @@
 
 module app.controller {
 
-  /**
-   *
-   */
   export class <%= _.classify(name) %> implements IController {
 
-   /**
-    *
-    * @param $scope
-    */
-    constructor(private $scope) {
+    constructor (private $scope) {
 
     }
 

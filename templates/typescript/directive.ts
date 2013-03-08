@@ -5,30 +5,13 @@
 
 module app.directive {
 
-  /**
-   *
-   */
   export class <%= _.classify(name) %> implements IDirective {
 
-    /**
-     *
-     * @type {string}
-     */
     template = '<div></div>';
 
-    /**
-     *
-     * @type {string}
-     */
     restrict = 'E';
 
-    /**
-     *
-     * @param scope
-     * @param element
-     * @param attrs
-     */
-    link(scope, element: JQuery, attrs: ng.IAttributes) {
+    link (scope, element: JQuery, attrs: ng.IAttributes) {
       element.text('this is the <%= _.camelize(name) %> directive');
     }
 

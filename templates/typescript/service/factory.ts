@@ -5,24 +5,15 @@
 
 module app.service {
 
-  /**
-   *
-   */
   export class <%= _.classify(name) %> implements IService {
 
     private meaningOfLife = 42;
 
-    /**
-     *
-     */
     constructor () {
 
     }
 
-    /**
-     *
-     */
-    someMethod() {
+    someMethod () {
       return this.meaningOfLife;
     }
 

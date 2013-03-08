@@ -5,23 +5,8 @@
 
 module app.filter {
 
-  /**
-   *
-   */
   export class <%= _.classify(name) %> implements IFilter {
 
-    /**
-     *
-     */
-    constructor() {
-
-    }
-
-    /**
-     *
-     * @param input
-     * @returns {string}
-     */
     filter (input: string) {
       return '<%= _.camelize(name) %> filter: ' + input;
     }
