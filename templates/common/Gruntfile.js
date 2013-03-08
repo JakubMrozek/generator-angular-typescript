@@ -21,14 +21,6 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
-      coffee: {
-        files: ['<%%= yeoman.app %>/scripts/{,*/}*.coffee'],
-        tasks: ['coffee:dist']
-      },
-      coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
-        tasks: ['coffee:test']
-      },
       typescript: {
         files: ['<%%= yeoman.app %>/scripts/{,*/}*.ts'],
         tasks: ['typescript:base']
@@ -129,21 +121,6 @@ module.exports = function (grunt) {
           sourcemap: true,
           declaration: true
         }
-      }
-    },
-    coffee: {
-      dist: {
-        files: {
-          '.tmp/scripts/coffee.js': '<%%= yeoman.app %>/scripts/*.coffee'
-        }
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/spec',
-          src: '*.coffee',
-          dest: 'test/spec'
-        }]
       }
     },
     less: {

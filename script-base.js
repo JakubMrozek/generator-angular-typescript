@@ -29,53 +29,15 @@ function Generator() {
     this.env.options.testPath = this.env.options.testPath || 'test/spec';
   }
 
-  if (typeof this.env.options.coffee === 'undefined') {
-    this.option('coffee');
+  this.options.typescript = true;
+  this.options.minsafe = true;
+  this.env.options.typescript = true;
+  this.env.options.minsafe = true;
 
-    // attempt to detect if user is using CS or not
-    // if cml arg provided, use that; else look for the existence of cs
-    if (!this.options.coffee &&
-      this.expandFiles('/' + this.appPath + '/scripts/**/*.coffee', {}).length > 0) {
-      this.options.coffee = true;
-    }
+  this.option('typescript');
 
-    this.env.options.coffee = this.options.coffee;
-  }
-
-  if (typeof this.env.options.typescript === 'undefined') {
-    this.option('typescript');
-
-    // attempt to detect if user is using typescript or not
-    // if cml arg provided, use that; else look for the existence of ts
-    if (!this.options.typescript &&
-      this.expandFiles('/' + this.appPath + '/scripts/**/*.ts', {}).length > 0) {
-      this.options.typescript = true;
-    }
-
-    this.env.options.typescript = this.options.typescript;
-  }
-
-  if (typeof this.env.options.minsafe === 'undefined') {
-    this.option('minsafe');
-    this.env.options.minsafe = this.options.minsafe;
-  }
-
-  var sourceRoot = '/templates/javascript';
-  this.scriptSuffix = '.js';
-
-  if (this.env.options.coffee) {
-    sourceRoot = '/templates/coffeescript';
-    this.scriptSuffix = '.coffee';
-  }
-
-  if (this.env.options.typescript) {
-    sourceRoot = '/templates/typescript';
-    this.scriptSuffix = '.ts';
-  }
-
-  if (this.env.options.minsafe) {
-    sourceRoot += '-min';
-  }
+  var sourceRoot = '/templates/typescript';
+  this.scriptSuffix = '.ts';
 
   this.sourceRoot(path.join(__dirname, sourceRoot));
 }

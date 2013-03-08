@@ -1,4 +1,5 @@
 /*global describe before it */
+/*
 'use strict';
 var fs = require('fs');
 var assert = require('assert');
@@ -135,3 +136,5 @@ describe('Angular generator', function () {
     });
   });
 });
+
+*/
