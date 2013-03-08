@@ -22,7 +22,7 @@ npm install && bower install
 
 ## Scaffolding
 
-Kromě samotných controllerů, direktiv, filtrů a servisů vygeneruje i příslušné třídy.
+Kromě samotných controllerů, direktiv, filtrů a servisů vygenerují i příslušné testy.
 
 ### Controllery
 
