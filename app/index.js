@@ -19,18 +19,9 @@ var Generator = module.exports = function Generator() {
   }
   this.appPath = this.env.options.appPath;
 
-  if (typeof this.env.options.typescript === 'undefined') {
-    this.option('typescript');
-
-    // attempt to detect if user is using typescript or not
-    // if cml arg provided, use that; else look for the existence of typescript
-    if (!this.options.typescript &&
-      this.expandFiles(process.cwd() + '/' + this.appPath + '/scripts/**/*.ts', {}).length > 0) {
-      this.options.typescript = true;
-    }
-
-    this.env.options.typescript = this.options.typescript;
-  }
+  this.option('typescript');
+  this.options.typescript = true;
+  this.env.options.typescript = this.options.typescript;
 
   if (typeof this.env.options.minsafe === 'undefined') {
     this.option('minsafe');
