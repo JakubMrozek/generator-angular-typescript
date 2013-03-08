@@ -9,8 +9,6 @@ module app.directive {
    */
   export class <%= _.classify(name) %> {
 
-    name = '<%= _.camelize(name) %>';
-
     /**
      *
      * @type {string}
