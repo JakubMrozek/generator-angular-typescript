@@ -1,6 +1,6 @@
-/// <reference path="../../../app/types/angular/angular.d.ts" />
-/// <reference path="../../../app/types/angular/angular-mocks.d.ts" />
-/// <reference path="../../../app/types/jasmine/jasmine.d.ts" />
+/// <reference path="../../../app/types/lib/angular/angular.d.ts" />
+/// <reference path="../../../app/types/lib/angular/angular-mocks.d.ts" />
+/// <reference path="../../../app/types/lib/jasmine/jasmine.d.ts" />
 
 'use strict';
 
