@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "angular": "~1.0.5",
+    "types": "git://github.com/borisyankov/DefinitelyTyped.git",
     "json3": "~3.2.4",
     "bootstrap": "*",
     "es5-shim": "2.0.2"<% if (resourceModule) { %>,

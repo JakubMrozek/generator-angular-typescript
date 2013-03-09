@@ -1,6 +1,6 @@
-/// <reference path="../../../app/types/lib/angularjs/angular.d.ts" />
-/// <reference path="../../../app/types/lib/angularjs/angular-mocks.d.ts" />
-/// <reference path="../../../app/types/lib/jasmine/jasmine.d.ts" />
+/// <reference path="../../../components/types/angularjs/angular.d.ts" />
+/// <reference path="../../../components/types/angularjs/angular-mocks.d.ts" />
+/// <reference path="../../../components/types/jasmine/jasmine.d.ts" />
 
 /// <reference path="../../../app/scripts/controllers/<%= name.toLowerCase() %>.ts" />
 
