@@ -1,5 +1,4 @@
-/// <reference path="../../components/types/angularjs/angular.d.ts" />
-/// <reference path="../../types/app.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 
@@ -15,11 +14,7 @@ module app.filter {
 
 }
 
-
-angular.module('app.filter').filter('<%= _.camelize(name) %>', [function(){
-  var obj = new app.filter.<%= _.classify(name) %>();
-  return obj.filter;
-}]);
+app.registerFilter('<%= _.classify(name) %>', []);
 
 
 

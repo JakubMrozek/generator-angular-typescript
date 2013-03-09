@@ -8,7 +8,7 @@
 
 describe('Controller: app.controller.<%= _.classify(name) %>', function () {
 
-  var ctrl: app.controller.<%= _.classify(name) %>;
+  var ctrl;
 
   beforeEach(function(){
     angular.mock.module('app');

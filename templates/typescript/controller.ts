@@ -1,5 +1,4 @@
-/// <reference path="../../components/types/angularjs/angular.d.ts" />
-/// <reference path="../../types/app.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 
@@ -15,7 +14,4 @@ module app.controller {
 
 }
 
-
-angular.module('app.controller').controller('app.controller.<%= _.classify(name) %>', [
-  '$scope', app.controller.<%= _.classify(name) %>
-]);
+app.registerController('<%= _.classify(name) %>', ['$scope']);

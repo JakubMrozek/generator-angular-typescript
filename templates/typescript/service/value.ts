@@ -1,4 +1,4 @@
-/// <reference path="../../components/types/angularjs/angular.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 

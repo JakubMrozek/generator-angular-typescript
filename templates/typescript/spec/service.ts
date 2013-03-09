@@ -8,7 +8,7 @@
 
 describe('Service: app.service.<%= _.classify(name) %>', function () {
 
-  var service: app.service.<%= _.classify(name) %>;
+  var service;
 
   beforeEach(function(){
     angular.mock.module('app');

@@ -35,8 +35,7 @@ yo angular:controller Ctrl
 Vygeneruje soubor app/scripts/controllers/ctrl.ts:
 
 ```javascript
-/// <reference path="../../types/angular/angular.d.ts" />
-/// <reference path="../../types/app.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 
@@ -52,10 +51,7 @@ module app.controller {
 
 }
 
-
-angular.module('app.controller').controller('app.controller.Ctrl', [
-  '$scope', app.controller.Ctrl
-]);
+app.registerController('Ctrl', ['$scope']);
 ```
 
 ### Direktivy
@@ -69,8 +65,7 @@ yo angular:directive dir
 Vygeneruje soubor app/scripts/directives/dir.ts:
 
 ```javascript
-/// <reference path="../../types/angular/angular.d.ts" />
-/// <reference path="../../types/app.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 
@@ -90,10 +85,7 @@ module app.directive {
 
 }
 
-
-angular.module('app.directive').directive('dir', [function(){
-  return new app.directive.Dir();
-}]);
+app.registerDirective('Dir', []);
 ```
 
 ### Filtry
@@ -107,8 +99,7 @@ yo angular:filter fil
 Vygeneruje soubor app/scripts/filters/fil.ts:
 
 ```javascript
-/// <reference path="../../types/angular/angular.d.ts" />
-/// <reference path="../../types/app.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 
@@ -124,11 +115,7 @@ module app.filter {
 
 }
 
-
-angular.module('app.filter').filter('fil', [function(){
-  var obj = new app.filter.Fil();
-  return obj.filter;
-}]);
+app.registerFilter('Fil', []);
 ```
 
 ### Servisy
@@ -142,8 +129,7 @@ yo angular:service serv
 Vygeneruje soubor app/scripts/services/serv.ts:
 
 ```javascript
-/// <reference path="../../types/angular/angular.d.ts" />
-/// <reference path="../../types/app.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 
@@ -165,10 +151,7 @@ module app.service {
 
 }
 
-
-angular.module('app.service').factory('serv', [function(){
-  return new app.service.Serv();
-}]);
+app.registerService('Serv', []);
 ```
 
 

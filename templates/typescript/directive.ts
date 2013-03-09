@@ -1,5 +1,4 @@
-/// <reference path="../../components/types/angularjs/angular.d.ts" />
-/// <reference path="../../types/app.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 
@@ -19,7 +18,4 @@ module app.directive {
 
 }
 
-
-angular.module('app.directive').directive('<%= _.camelize(name) %>', [function(){
-  return new app.directive.<%= _.classify(name) %>();
-}]);
+app.registerDirective('<%= _.classify(name) %>', []);

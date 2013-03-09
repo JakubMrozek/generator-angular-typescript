@@ -2,6 +2,8 @@
 /// <reference path="../../../app/components/types/angularjs/angular-mocks.d.ts" />
 /// <reference path="../../../app/components/types/jasmine/jasmine.d.ts" />
 
+/// <reference path="../../../app/scripts/filters/<%= _.camelize(name) %>.ts" />
+
 'use strict';
 
 describe('Filter: <%= _.camelize(name) %>', function () {

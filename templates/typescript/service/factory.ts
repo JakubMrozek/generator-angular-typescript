@@ -1,5 +1,4 @@
-/// <reference path="../../components/types/angularjs/angular.d.ts" />
-/// <reference path="../../types/app.d.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 
@@ -21,7 +20,4 @@ module app.service {
 
 }
 
-
-angular.module('app.service').factory('<%= _.camelize(name) %>', [function(){
-  return new app.service.<%= _.classify(name) %>();
-}]);
+app.registerService('<%= _.classify(name) %>', []);
